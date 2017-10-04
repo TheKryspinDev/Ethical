@@ -1,136 +1,131 @@
-
------------ NEW TOPIC
-........... BREAK BETWEEN SUBTOPICS
-///////////	SUBTOPIC
-
--------------------------------SCANNING NETWORKS------------------------------
-
-///////////////////////////WHAT IS SCANNING???????/////////////////////////////////
-
-	From Reco we have found our targets. It was really high level. So we found range of
-	the ip adresses or owners of them.
-	SCANNING is simply looking for live systems, for some we can use simple tools, for some
-	it is more complex. 
-	Next step after identification is to go thruogh and try to discover what ports are open
-	or closed and how they respond for the respones.
-	Based on this ports which services are running and how can I use them.
-	
-	///////////////////////////TYPES OF SCANNING???????/////////////////////////////////
-
-	1. Network scan - putting packet to the network that is going to look at every single device
-					  on the network and go through and try to identify it and as it tries to 
-					  identify it reports back which host is currently on.
-						
-					OBJECTIVES:
-						1.1. Find all "live" hosts
-						1.2. Possibly see OS's (router, switch, printer)
-						1.3. Pick up IP adresses
-						
-	2. Port scan - (port is an ip adress with attached protocol E.g. ip + http -> ip:80 ).
-	
-	3. Vulnerability Scan - Identify possible threats to OS/Apps, identify vulnerabilities OS/Apps.
-	
-	///////////////////////////TECHNIQUES USED/////////////////////////////////
-
-	1. Internal or External
-	2. Not just computers (printers and switches either.)
-	3. WiFi
-	4. Banner Grabbing - takes adventage of how server responds to identify it.
-	
-	
-	///////////////////////////WHAT TOOLS ARE USED/////////////////////////////////
-
-	1. Command Line
-	2*. Nmap https://nmap.org/
-	3*. Angry IP Scanner  http://angryip.org/download/#windows
-	4. Solarwinds
-	5. Colasoft Ping http://www.colasoft.com/download/products/download_ping_tool.php
-	6. Visual Ping Tester http://www.pingtester.net/
-	7. Ping Scanner Pro https://www.netscantools.com/nstpro_ping_scanner.html
-	8*. Nessus - https://www.tenable.com/products/nessus-vulnerability-scanner?
-	
-	*More attention should be taken for them ;)
-.............................................................................................
-
-		///////////////////////////3 WAY HANDSHAKE/////////////////////////////////
-		
-		///////////////////////////TCP COMMUNICATIONS/////////////////////////////////
-		If computer devices want to talk to each other they need to have some way to do this
-		and there are two ways:
-		1. TCP
-		2. UDP
-		
-		STAGES OF TCP
-		1. NEGOTIATE A CONNECTION:
-			- Hi Can we connect to transfer some data ? : )
-			
-		2. DELIVERY ACKNOWLEDGEMENTS:
-			- I got package from you, keep going.
-			
-		3. ERROR DETECTION.
-		
-		4. IN ORDER DELIVERY.
-		
-		TCP is slower than UDP beceause it has more stages and header as well (20 bytes).
-		Bigger overhead and stream oriented.
-		
-		
-
-	///////////////////////////UDP COMMUNICATIONS/////////////////////////////////	
-		1. Connectionless based.
-		2. Smaller packets(8 bytes).
-		3. Only 1 packet goes.
-		4. Out of order.
-		5. No congestion control.
-		6. Message-oriented.
-	
-	///////////////////////////TCP HEADER FLAGS////////////////////////////////////
-	They represent different types of communications and connections we would like to establish.
-		1. SYNC - Synchronization (Includes a seq number ).-
-				  Sequance numbers themselves do not actually increase sequentially but they are 
-				  linked to the source machine and destination machine. Technically it is randomized
-				  based off of the payload and that number can be anywhere from 0 to 9to9to9.
-				  MOST OF TOOLS like wireshark will display only the relative sequance and 
-				  acknowlegement numbers in place of the actual numbers, which makes it little bit
-				  easier to see.
-		2. ACK - Acknoledgment - I GOT YOUR REQUEST THAT YOU'D LIKE TO DO SMTH.
-								 I GOT YOUR MESSAGE.
-		3. FIN - FINNISH.
-		
-		4. PSH - PUSH. I need push data to You.
-		
-		5. URG - Urgent. I need send this immediately.
-		
-		6. RST - Reset. I need reset connection.
-		
-						NORMAL 3 WAY HANDSHAKE:
-				|PC 1 |						|PC 2|
-				PC 1 need to set
-				up connection with
-				PC 2. So he sends
-				Syn with sq nr
-
-					SYN  # 101->
-									PC 2 responds to it
-									with SYN/ACK.
-									
-						<-#Your(102) #My(#508)SYN/ACK
-									I got your sequance, 
-									here is mine and your incremented.
-				
-				ACK #Your(509) My(102)->
-				Yea Your right, my was 102
-				and your next is 509.
-				
-					AFTER SOURCE PC IS DONE TRANSFERING:
-					
-					FIN -> 				
-					I wanna stop now.
-											<-ACK/FIN
-										Ok i ACKNOWLEDGE THAT.
-										I will tell Apps to Stop.
-					ACK ->
-					Ok.. Nice talking 
-					to You.
-					
-	
+<nppcrypt version="1013">
+<encryption cipher="rijndael256" mode="gcm" encoding="base64" tag="ZMi5dgbhnnp8DmiMT4hjuQ==" />
+<random iv="PzGbij0znad44OW146e1PA==" salt="ScRNdaCIw/U0uAb1QEh8yw==" />
+<key algorithm="scrypt" N="16384" r="8" p="1" />
+</nppcrypt>
+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
+4oSwaOqzLG1Zdw==
